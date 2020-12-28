@@ -3,6 +3,7 @@ package December;
 public class leecode008 {
     //字符串转整数
     //可以用trim()来去除字符串中的空字符
+    //Character.isDigit()判断是不是一个数字字符
     public int myAtoi(String s) {
         if(s==null||s.equals("")){
             return 0;
