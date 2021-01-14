@@ -32,10 +32,4 @@ public class leecode605 {
         }
         return res>=n;
     }
-
-    @Test
-    public void test(){
-        int[] arr = {1,0,0,0,1};
-        System.out.println(canPlaceFlowers(arr,1));
-    }
 }
