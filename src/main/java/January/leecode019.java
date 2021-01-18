@@ -1,5 +1,7 @@
 package January;
 
+import DataStructure.ListNode;
+
 /**
  * @author qian.li
  * @title: leecode019

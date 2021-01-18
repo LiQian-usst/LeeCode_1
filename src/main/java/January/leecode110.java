@@ -1,5 +1,7 @@
 package January;
 
+import DataStructure.TreeNode;
+
 public class leecode110 {
     // 判断平衡二叉树
     public boolean isBalanced(TreeNode root) {

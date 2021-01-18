@@ -1,5 +1,7 @@
 package January;
 
+import DataStructure.ListNode;
+
 public class leecode141 {
     public boolean hasCycle(ListNode head) {
         if(head == null || head.next == null){

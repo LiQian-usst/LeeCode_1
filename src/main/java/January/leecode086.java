@@ -1,5 +1,7 @@
 package January;
 
+import DataStructure.ListNode;
+
 public class leecode086 {
     // 分隔链表
     public ListNode partition(ListNode head, int x) {
