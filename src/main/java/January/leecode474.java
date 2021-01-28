@@ -1,6 +1,6 @@
 package January;
 
-public class leecode474 {
+public class  leecode474 {
     // 一和零
     public int findMaxForm(String[] strs, int m, int n) {
         int[][] dp = new int[m + 1][n + 1];
@@ -13,6 +13,7 @@ public class leecode474 {
         return dp[m][n];
     }
 
+    // int[0]:0的个数 int[1]:1的个数
     public int[] countzeroesones(String s) {
         int[] c = new int[2];
         for (int i = 0; i < s.length(); i++) {
