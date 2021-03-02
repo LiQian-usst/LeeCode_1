@@ -32,6 +32,6 @@ public class Demo1 {
         return res;
     }
 
-    //3、O(logN)的方法
+    //3、O(logN)的方法，利用状态矩阵
 
 }
