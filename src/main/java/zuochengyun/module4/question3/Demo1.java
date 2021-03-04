@@ -10,7 +10,7 @@ import org.junit.Test;
  */
 public class Demo1 {
     // 换钱的最少货币数
-    // 法1：暴力递归找到所有满足的组合，
+    // 法1：暴力递归找到所有满足的组合
     public int minCoins1(int[] arr,int aim){
         if (arr == null || arr.length == 0 || aim < 0){
             return -1;
