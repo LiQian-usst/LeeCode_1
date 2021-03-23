@@ -45,4 +45,6 @@ public class Demo1 {
         int[] arr = {1,2,1,1,1};
         System.out.println(getMaxLength(arr,3));
     }
+
+
 }
