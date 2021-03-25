@@ -1,5 +1,3 @@
-package zuochengyun.module8.question1;
-
 import java.util.Scanner;
 public class Main {
     
