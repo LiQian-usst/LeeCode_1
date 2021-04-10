@@ -17,8 +17,9 @@ public class TopKFrequentElements {
 
         // 升序,即最小堆
         // 用最小堆的原因是:新加入数的出现频率只需要比当前出现频率最小的数大就可以，然后删除堆顶的数，加入新的数，
-        // 此时堆会自动调整成新的最小堆的形式
+        // 此时堆会自动调整成新的最小堆的形式(存入的数字，但是优先级按照数字出现的频率排序)
         PriorityQueue<Integer> pq = new PriorityQueue<>((Comparator<Integer>) (a, b) -> map.get(a)-map.get(b));
+        // 取所有的键集合
         for (Integer key : map.keySet()) {
             if (pq.size() < k) {
                 pq.add(key);
