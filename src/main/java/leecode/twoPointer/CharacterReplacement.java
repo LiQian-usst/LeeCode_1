@@ -1,4 +1,4 @@
-package January;
+package leecode.twoPointer;
 
 /**
  * @author qian.li
@@ -6,7 +6,7 @@ package January;
  * @description:
  * @date 2021/1/13 18:49
  */
-public class leecode424 {
+public class CharacterReplacement {
     public int characterReplacement(String s, int k) {
         // 维护了窗口内所有值出现的次数
         int[] arr = new int[26];
