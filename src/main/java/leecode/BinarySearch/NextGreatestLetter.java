@@ -1,4 +1,4 @@
-package leecode.erfen;
+package leecode.BinarySearch;
 
 public class NextGreatestLetter {
     public char nextGreatestLetter(char[] letters, char target) {

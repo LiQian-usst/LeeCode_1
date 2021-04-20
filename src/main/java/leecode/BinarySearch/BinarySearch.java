@@ -1,4 +1,4 @@
-package leecode.erfen;
+package leecode.BinarySearch;
 
 public class BinarySearch {
     // 1.正常实现

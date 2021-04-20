@@ -1,4 +1,4 @@
-package leecode.erfen;
+package leecode.BinarySearch;
 
 import org.junit.Test;
 
