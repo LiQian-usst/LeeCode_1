@@ -1,4 +1,4 @@
-package leecode.Search;
+package leecode.Search.BFS;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

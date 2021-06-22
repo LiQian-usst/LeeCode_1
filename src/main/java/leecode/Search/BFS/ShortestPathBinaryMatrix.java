@@ -1,4 +1,4 @@
-package leecode.Search;
+package leecode.Search.BFS;
 import java.util.*;
 
 public class ShortestPathBinaryMatrix {
@@ -12,7 +12,7 @@ public class ShortestPathBinaryMatrix {
         int m = grid.length, n = grid[0].length;
         // 定义方向
         int[][] direction = {{1, -1}, {1, 0}, {1, 1}, {0, -1}, {0, 1}, {-1, -1}, {-1, 0}, {-1, 1}};
-        // 定义队列
+        // 定义队列（存储每一层）
         Queue<Pair> queue = new LinkedList();
         Pair pair = new Pair(0, 0);
         queue.offer(pair);
