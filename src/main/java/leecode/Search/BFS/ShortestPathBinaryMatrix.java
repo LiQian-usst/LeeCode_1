@@ -7,39 +7,36 @@ public class ShortestPathBinaryMatrix {
     public int shortestPathBinaryMatrix(int[][] grid) {
         return BFS(grid);
     }
-
+    // 广度优先遍历
     public int BFS(int[][] grid){
         int m = grid.length, n = grid[0].length;
         // 定义方向
         int[][] direction = {{1, -1}, {1, 0}, {1, 1}, {0, -1}, {0, 1}, {-1, -1}, {-1, 0}, {-1, 1}};
-        // 定义队列（存储每一层）
-        Queue<Pair> queue = new LinkedList();
-        Pair pair = new Pair(0, 0);
-        queue.offer(pair);
-        int pathLength = 0;
+        Queue<Pair> queue = new LinkedList<>();
+        queue.add(new Pair(0,0));
+        int minLength = 0;
         while(!queue.isEmpty()){
-            // 将当前同一层次的所以值进行访问
             int size = queue.size();
-            pathLength++;
+            minLength++;
             for(int i=0;i<size;i++){
                 Pair cur = queue.poll();
-                // 情况1：节点值为1，此时为无效路径
-                if(grid[cur.x][cur.y]==1){
+                int x = cur.x;
+                int y = cur.y;
+                // 为1的点不能过
+                if(grid[x][y]==1){
                     continue;
                 }
-                // 情况2：到达边界条件
-                if(cur.x == m-1 && cur.y == n-1){
-                    return pathLength;
+                if (x == m-1 && y == n-1){
+                    return minLength;
                 }
-                // 标记
-                grid[cur.x][cur.y] = 1;
-                for(int[] d:direction){
-                    int newX = cur.x + d[0];
-                    int newY = cur.y + d[1];
-                    if(newX < 0 || newX >= m || newY < 0 || newY >= n){
+                // 标记已访问
+                grid[x][y] = 1;
+                for (int[] d : direction) {
+                    int nr = x + d[0], nc = y + d[1];
+                    if (nr < 0 || nr >= m || nc < 0 || nc >= n) {
                         continue;
                     }
-                    queue.add(new Pair(newX, newY));
+                    queue.add(new Pair(nr, nc));
                 }
             }
         }

@@ -3,7 +3,6 @@ package leecode.Search.DFS;
 public class MaxAreaOfIsland {
     // 695.岛屿的最大面积
     // DFS深度优先算法解决
-
     private int m, n;
     // 方向移动类的问题都可这样设置方向
     private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
@@ -21,17 +20,21 @@ public class MaxAreaOfIsland {
     }
 
     public int dfs(int[][] grid, int x, int y){
-        if(x < 0 || x >=m || y < 0 || y>=n || grid[x][y]==0){
+        if(grid[x][y]==0){
             return 0;
         }
-        // 置为已访问
         grid[x][y] = 0;
         int area = 1;
-        // 便利上下左右方向
-        for(int[] d : direction){
-            area += dfs(grid,x+d[0],y+d[1]);
+        // 从一条路径走到底
+        // 然后走另外一条路到底
+        for(int[] d:direction){
+            int curX = x + d[0];
+            int curY = y + d[1];
+            if(curX<0 || curX >=m || curY<0 || curY>=n){
+                continue;
+            }
+            area += dfs(grid,curX,curY);
         }
         return area;
     }
-
 }
